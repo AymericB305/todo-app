@@ -4,12 +4,11 @@
         <div class="buttons">
             <button @click="toggle">{{todo.isDone ? 'Undo' : 'Done'}}</button>
             <button @click="remove" class="delete">Delete</button>
-            {{index}}
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
     defineProps(['todo']);
     const emit = defineEmits(['toggle', 'remove']);
 

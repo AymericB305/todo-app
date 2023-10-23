@@ -20,7 +20,7 @@
   </main>
 </template>
 
-<script setup> 
+<script setup lang="ts"> 
 import { useTodosStore } from './store/store';
 
   const todosStore = useTodosStore();
@@ -34,11 +34,11 @@ import { useTodosStore } from './store/store';
     }
   }
 
-  function toggle(index) {
+  function toggle(index: number) {
     todosStore.toggle(index);
   }
 
-  function remove(index) {
+  function remove(index: number) {
     todosStore.remove(index);
   }
 
