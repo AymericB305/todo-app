@@ -1,15 +1,26 @@
 <template>
-  <main>
-    <h1>Todo List</h1>
-    <p>Add your own todos</p>
+  <main class="w-full h-100vh flex flex-col items-center pt-8">
+    <h1 class="uppercase mb-2 text-4xl font-bold">Todo List</h1>
+    <p class="mb-8">Add your own todos</p>
     
-    <div class="create-new">
-      <input type="text" v-model="newTodo" placeholder="Add a new todo" @keypress.enter="addTodo" />
+    <div class="flex justify-center items-center max-w-lg">
+      <input
+        class="appearance-none outline-none border-b border-solid border-white bg-transparent text-2xl py-2 duration-300 focus:border-green-400"
+        type="text"
+        v-model="newTodo"
+        placeholder="Add a new todo"
+        @keypress.enter="addTodo"
+      />
 
-      <button @click="addTodo">Add</button>
+      <button
+        class="button bg-green-400 text-black text-xl"
+        @click="addTodo"
+      >
+        Add
+      </button>
     </div>
 
-    <div class="todos">
+    <div class="todos w-full max-w-lg mt-8">
       <Todo
         v-for="(todo, i) in todos"
         :todo="todo"
