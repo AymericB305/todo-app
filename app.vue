@@ -12,12 +12,7 @@
         @keypress.enter="addTodo"
       />
 
-      <button
-        class="button bg-green-400 text-black text-xl"
-        @click="addTodo"
-      >
-        Add
-      </button>
+      <button class="button bg-green-400 text-black text-xl" @click="addTodo">Add</button>
     </div>
 
     <div class="todos w-full max-w-lg mt-8">
