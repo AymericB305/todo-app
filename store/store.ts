@@ -5,7 +5,7 @@ type Todo = {
     isDone: boolean;
 }
 
-interface State {
+type State = {
     todos: Todo[];
 }
 
